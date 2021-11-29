@@ -1,40 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
-import AxiosAPI from "./Modules/AxiosAPI";
-import {useEffect} from "react";
+import {BrowserRouter as Router} from 'react-router-dom';
+import Routes from "./routes/Routes";
+
 
 function App() {
 
-  useEffect(() => {
-    fetchMembers()
-  }, [])
-
-const fetchMembers =() => {
-
-  AxiosAPI(`./api/json_files/members.json`, 'GET', false).then((res) => {
-    console.log(res)
-  })
-
-
-  }
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes/>
+        </Router>
+    );
 }
 
 export default App;
