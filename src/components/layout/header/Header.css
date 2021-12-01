@@ -1,0 +1,10 @@
+.nav-color {
+
+    background: rgba(255, 148, 25, 0.85);
+
+}
+
+.nav-color .navbar-brand,
+.nav-color .navbar-text {
+    color: #fff;
+}
